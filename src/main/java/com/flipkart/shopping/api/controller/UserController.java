@@ -30,5 +30,19 @@ public class UserController {
 		return new ResponseEntity<String>("SignUp Successfully",HttpStatus.OK);
 	}
 	
-	
+	@PostMapping(value = "/login")
+	public ResponseEntity<String> login(@RequestBody User user){
+		
+		if(user!=null) {
+			User user_db = service.findUserByUserNameAndPassword(user.getUsername(), user.getPassword());
+			
+			if(user_db!=null) {
+				return new ResponseEntity<String>("Login Successfull",HttpStatus.OK);
+			}else {
+				return new ResponseEntity<String>("Invalid Login",HttpStatus.UNAUTHORIZED);
+			}
+		}
+		return null;
+	}
+
 }

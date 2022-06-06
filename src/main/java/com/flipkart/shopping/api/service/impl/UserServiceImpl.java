@@ -1,8 +1,11 @@
 package com.flipkart.shopping.api.service.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.flipkart.shopping.api.model.Product;
 import com.flipkart.shopping.api.model.User;
 import com.flipkart.shopping.api.repository.UserRepo;
 import com.flipkart.shopping.api.service.UserService;
@@ -18,6 +21,14 @@ public class UserServiceImpl implements UserService{
 		// TODO Auto-generated method stub
 		if(username!=null)
 			return repo.findByUsername(username);
+		
+		return null;
+	}
+	
+	public User findUserByUserNameAndPassword(String username, String password) {
+		// TODO Auto-generated method stub
+		if(username!=null && password!=null)
+			return repo.findByUsernameAndPassword(username, password);
 		
 		return null;
 	}

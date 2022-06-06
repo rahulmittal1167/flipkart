@@ -37,6 +37,6 @@ build/
 .project
 .settings/
 target
-.mvn/wrapper/maven-wrapper
+.mvn/
 mnvw
 mnvw.cmd

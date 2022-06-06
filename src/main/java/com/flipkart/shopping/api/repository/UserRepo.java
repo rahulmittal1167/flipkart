@@ -7,4 +7,5 @@ import com.flipkart.shopping.api.model.User;
 public interface UserRepo extends MongoRepository<User, Integer> {
 
 	User findByUsername(String username);
+	User findByUsernameAndPassword(String username, String password);
 }
