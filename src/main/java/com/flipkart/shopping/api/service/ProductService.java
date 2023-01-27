@@ -12,4 +12,6 @@ public interface ProductService {
 	List<Product> getAllTheProducts();
 	
 	void saveAllTheProducts(List<Product> list);
+
+	List<Product> getProductByFilter(String desc);
 }

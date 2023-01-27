@@ -6,6 +6,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Product {
 
 	private int id;
+	private String name;
+	private String category;
 	private String url;
 	private String detailUrl;
 	private Title title;
@@ -14,6 +16,23 @@ public class Product {
 	private String description;
 	private String discount;
 	private String tagline;
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getCategory() {
+		return category;
+	}
+
+	public void setCategory(String category) {
+		this.category = category;
+	}
+
 	public int getId() {
 		return id;
 	}

@@ -32,4 +32,9 @@ public class ProductController {
 		log.info("Getting all the Products ######3");
 		return service.getAllTheProducts();
 	}
+
+	@GetMapping("/getProductByFilter/{desc}")
+	public List<Product> getProductByFilter(@PathVariable("desc") String desc){
+		return service.getProductByFilter(desc);
+	}
 }
